@@ -10,3 +10,14 @@ ros2 launch urdf_tutorial display.launch.py model:=/home/daniel/projects/yard_gu
 ```
 ros2 pkg create my_py_pkg --build-type ament_python --dependencies rclpy
 ```
+
+### Run in gazebo
+```bash build.sh; bash bringup.sh;
+In a different terminal
+```ros2 run teleop_twist_keyboard teleop_twist_keyboard```
+Control programatically
+```
+ros2 topic pub -r 1 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.5}, angular: {z: 0.5}}"
+ros2 topic pub -r 1 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0}, angular: {z: 0.0}}"
+```
+
