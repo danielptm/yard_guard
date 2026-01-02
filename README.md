@@ -21,3 +21,8 @@ ros2 topic pub -r 1 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.5}, angular
 ros2 topic pub -r 1 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0}, angular: {z: 0.0}}"
 ```
 
+### Add camera sensor
+1. Add xacro file for camera definition
+2. Create gazebo bridge in gazebo_bridge.yaml file
+3. Add sensor plugin to the world map you want the camera sensor to work in
+4. To get camera feed, add camera in rviz, define the camera topic
